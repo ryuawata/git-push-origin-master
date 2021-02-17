@@ -1,0 +1,14 @@
+<div class="banner">
+  <div class="container justify-content">
+    <h1>Yelp</h1>
+    <p>Find the best restaurants in town.</p>
+    <a class="btn btn-danger"><i class="fas fa-search"></i></a>
+  </div>
+</div>
+
+<div>
+	<h2>Add your review here</h2>
+	<%= render 'form', restaurant: @restaunrant, review: @review %>
+	<br>
+	<%= link_to 'Back to restaurant', restaurant_path(@restaurant) %>
+</div>	

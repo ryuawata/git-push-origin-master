@@ -1,0 +1,27 @@
+<div class="banner">
+  <div class="container justify-content">
+    <h1>Yelp</h1>
+    <p>Find the best restaurants in town.</p>
+    <a class="btn btn-danger"><i class="fas fa-search"></i></a>
+  </div>
+</div>
+
+<div class="container">
+	<h2><%= @restaurant.name %> </h2>
+	<div class="details">
+		<h3><%= @restaurant.category %></h3>
+		<p><%= @restaurant.address %></p>
+    	<p><%= @restaurant.phone_number %></p>
+    	<a class="btn btn-danger"><%= link_to 'Write a review', new_restaurant_review_path(@restaurant.id) %> </a>
+	</div>
+	<div class="reviews">
+		<ul>
+		<% @reviews.each do |rev| %>
+		<li>
+		<p><%= rev.content %></p>
+		<p><%= rev.rating %></p>
+		</li>
+		<% end %>
+		</ul>
+	</div>
+</div>

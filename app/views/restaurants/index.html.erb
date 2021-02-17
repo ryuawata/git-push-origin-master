@@ -1,0 +1,19 @@
+<div class="banner">
+  <div class="container justify-content">
+    <h1>Yelp</h1>
+    <p>Find the best restaurants in town.</p>
+    <a class="btn btn-danger"><i class="fas fa-search"></i></a>
+  </div>
+</div>
+
+<h1>Restaurants</h1>
+<%= @restaurants.each do |r| %>
+<div class="restaurant">
+  <div class="restaurant-info">
+    <h2><%= link_to r.name, restaurant_path(r.id) %></h2>
+    <p><%= r.address %></p>
+    <p><%= r.phone_number %></p>
+    <p><strong><%= r.category %></strong></p>
+  </div>
+</div>
+<% end %>
